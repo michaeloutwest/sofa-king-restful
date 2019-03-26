@@ -1,0 +1,18 @@
+type Message {
+    id: ID!
+    text: String!
+}
+
+type Query {
+    message(id: ID!): Message
+    messages: [Message!]
+}
+
+type Mutation {
+    writeMessage(text: String!): Message
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
